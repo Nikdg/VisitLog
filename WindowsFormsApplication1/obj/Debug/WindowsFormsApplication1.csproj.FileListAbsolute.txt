@@ -1,2 +1,10 @@
 c:\users\101\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
 S:\PortableGit\VisitLog\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+S:\PortableGit\VisitLog\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+S:\PortableGit\VisitLog\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+S:\PortableGit\VisitLog\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+S:\PortableGit\VisitLog\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.MainForm.resources
+S:\PortableGit\VisitLog\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+S:\PortableGit\VisitLog\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+S:\PortableGit\VisitLog\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+S:\PortableGit\VisitLog\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
