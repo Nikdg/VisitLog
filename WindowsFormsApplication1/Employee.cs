@@ -27,6 +27,17 @@ namespace WindowsFormsApplication1
                 employeePosition = value;
             }
         }
+        public string Subject
+        {
+            get
+            {
+                return subject;
+            }
+            set
+            {
+                subject = value;
+            }
+        }
 
     }
 }

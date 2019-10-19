@@ -16,6 +16,7 @@ namespace WindowsFormsApplication1
         {
             this.faculty = faculty;
             this.specialty = specialty;
+            this.group = group;
         }
         public string Faculty
         {

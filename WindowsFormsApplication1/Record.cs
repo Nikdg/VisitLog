@@ -12,5 +12,13 @@ namespace WindowsFormsApplication1
         {
             
         }
+        public void RecordVisit(string name, string surname, int age, string faculty, string specialty, string group)
+        {
+
+        }
+        public void RecordVisit(string name, string surname, int age, string goalVisit)
+        {
+
+        }
     }
 }
