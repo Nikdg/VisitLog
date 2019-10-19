@@ -1,1 +1,2 @@
 c:\users\101\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+S:\PortableGit\VisitLog\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
