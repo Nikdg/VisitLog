@@ -8,3 +8,13 @@ S:\PortableGit\VisitLog\WindowsFormsApplication1\obj\Debug\WindowsFormsApplicati
 S:\PortableGit\VisitLog\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
 S:\PortableGit\VisitLog\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 S:\PortableGit\VisitLog\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+D:\Git\VisitLog\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+D:\Git\VisitLog\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+D:\Git\VisitLog\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+D:\Git\VisitLog\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojAssemblyReference.cache
+D:\Git\VisitLog\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.MainForm.resources
+D:\Git\VisitLog\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\Git\VisitLog\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.cache
+D:\Git\VisitLog\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.CoreCompileInputs.cache
+D:\Git\VisitLog\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+D:\Git\VisitLog\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb

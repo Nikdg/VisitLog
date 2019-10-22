@@ -9,6 +9,10 @@ namespace WindowsFormsApplication1
 {
     class Record : IRecord
     {
+        public Record()
+        {
+
+        }
         string recVisit;
         public string RecordVisit(string name, string surname, int age, string employeePosition, string subject)
         {
