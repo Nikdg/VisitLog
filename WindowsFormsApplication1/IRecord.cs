@@ -13,4 +13,8 @@ namespace WindowsFormsApplication1
         string RecordVisit(string name, string surname, int age, string faculty, string specialty, string group);
         string RecordVisit(string name, string surname, int age, string goalVisit);
     }
+    public interface IPresenter
+    {
+        void Run();
+    }
 }

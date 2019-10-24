@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-    class Person
+    public class Person
     {
         private string name;
         private string surname;

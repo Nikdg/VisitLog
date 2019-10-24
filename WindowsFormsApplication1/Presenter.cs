@@ -6,9 +6,23 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-    class Presenter
+    public class Presenter : IPresenter
     {
-        Record record = new Record();
+        MainForm form;
+        Record record;
+        public Presenter()
+        {
+
+        }
+        public Presenter(MainForm form, Record record)
+        {
+            this.form = form;
+            this.record = record;
+        }
+        public void Run()
+        {
+            form.Show();
+        }
         public string WriteEmployee(Employee rec)
         {
             return record.RecordVisit(rec.Name, rec.Surname,rec.Age, rec.EmployeePosition, rec.Subject );

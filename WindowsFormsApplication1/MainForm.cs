@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class MainForm : Form
+    public partial class MainForm : Form, IView
     {
         string name;
         string surname;
@@ -21,10 +21,14 @@ namespace WindowsFormsApplication1
         string specialty;
         string group;
         string goalVisit;
+        Presenter presenter = new Presenter();
         Employee employee;
         Student student;
         Visitor visitor;
-        Presenter pr = new Presenter();
+        public new void Show()
+        {
+            Application.Run(this);
+        }
         public MainForm()
         {
             InitializeComponent();
@@ -48,21 +52,41 @@ namespace WindowsFormsApplication1
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             People people = (People)comboBox1.SelectedItem;
-            if (comboBox1.SelectedIndex == 0 | comboBox1.SelectedIndex == 1)
+            switch(comboBox1.SelectedIndex)
             {
-                textBox5.Visible = true;
-            }
-            else
-            {
-                textBox5.Visible = false;
-            }
-            if (comboBox1.SelectedIndex == 1)
-            {
-                textBox6.Visible = true;
-            }
-            else
-            {
-                textBox6.Visible = false;
+                case 0:
+                    textBox4.Visible = true;
+                    label4.Visible = true;
+                    label4.Text = "Должность";
+                    textBox4.Width = 117; 
+                    textBox5.Visible = true;
+                    label5.Text = "Предмет";
+                    textBox6.Visible = false;
+                    label6.Visible = false;
+                    break;
+                case 1:
+                    textBox4.Visible = true;
+                    label4.Visible = true;
+                    label4.Text = "Факультет";
+                    textBox4.Width = 117;
+                    textBox5.Visible = true;
+                    label5.Text = "Специальность";
+                    textBox6.Visible = true;
+                    label6.Visible = true;
+                    label6.Text = "Группа";
+                    break;
+                case 2:
+                    textBox4.Visible = true;
+                    textBox4.Width = 200;
+                    label4.Visible = true;
+                    label4.Text = "Цель визита";
+                    textBox5.Visible = false;
+                    label5.Visible = false;
+                    textBox5.Visible = false;
+                    textBox6.Visible = false;
+                    label6.Visible = false;
+                    break;
+
             }
         }
         private void button1_Click(object sender, EventArgs e)
@@ -74,23 +98,38 @@ namespace WindowsFormsApplication1
             {
                 case 0:
                     employeePosition = textBox4.Text;
-                    subject=textBox5.Text;
-                    employee = new Employee(name, surname, age, employeePosition, subject);
-                    listBox1.Items.Add(pr.WriteEmployee(employee));
+                    subject = textBox5.Text;
+                    WriterEmployee(employee);
+                    listBox1.Items.Add(presenter.WriteEmployee(employee));
                     break;
                 case 1:
                     faculty = textBox4.Text;
                     specialty = textBox5.Text;
                     group = textBox6.Text;
-                    student = new Student(name, surname, age, faculty, specialty,group);
-                    listBox1.Items.Add(pr.WriteStudent(student));
+                    WriterStudent(student);
+                    presenter.WriteStudent(student);
                     break;
                 case 2:
                     goalVisit = textBox4.Text;
-                    visitor = new Visitor(name, surname, age, goalVisit);
-                    listBox1.Items.Add(pr.WriteVisitor(visitor));
+                    WriterVisitor(visitor);
+                    presenter.WriteVisitor(visitor);
                     break;
             }
+        }
+        public void WriterEmployee(Employee _employee)
+        {
+            this.employee = _employee;
+            employee = new Employee(name,surname,age,employeePosition,subject);
+        }
+        public void WriterStudent(Student _student)
+        {
+            this.student = _student;
+            student = new Student(name, surname, age, faculty, specialty, group);
+        }
+        public void WriterVisitor(Visitor _visitor)
+        {
+            this.visitor = _visitor;
+            visitor = new Visitor(name, surname, age, goalVisit);
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
