@@ -12,19 +12,6 @@ namespace WindowsFormsApplication1
 {
     public partial class MainForm : Form, IView
     {
-        string name;
-        string surname;
-        int age;
-        string employeePosition;
-        string subject;
-        string faculty;
-        string specialty;
-        string group;
-        string goalVisit;
-        Presenter presenter = new Presenter();
-        Employee employee;
-        Student student;
-        Visitor visitor;
         public new void Show()
         {
             Application.Run(this);
@@ -32,6 +19,7 @@ namespace WindowsFormsApplication1
         public MainForm()
         {
             InitializeComponent();
+            new Presenter(this);
             List<People> people = new List<People>
         {
             new People { Id=1, Name="Педагог"},
@@ -43,6 +31,7 @@ namespace WindowsFormsApplication1
             comboBox1.ValueMember = "Id";
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
         }
+        public event EventHandler Writed;
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -91,45 +80,7 @@ namespace WindowsFormsApplication1
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            name = textBox1.Text;
-            surname = textBox2.Text;
-            age = Int32.Parse(textBox3.Text);
-            switch (comboBox1.SelectedIndex)
-            {
-                case 0:
-                    employeePosition = textBox4.Text;
-                    subject = textBox5.Text;
-                    WriterEmployee(employee);
-                    listBox1.Items.Add(presenter.WriteEmployee(employee));
-                    break;
-                case 1:
-                    faculty = textBox4.Text;
-                    specialty = textBox5.Text;
-                    group = textBox6.Text;
-                    WriterStudent(student);
-                    presenter.WriteStudent(student);
-                    break;
-                case 2:
-                    goalVisit = textBox4.Text;
-                    WriterVisitor(visitor);
-                    presenter.WriteVisitor(visitor);
-                    break;
-            }
-        }
-        public void WriterEmployee(Employee _employee)
-        {
-            this.employee = _employee;
-            employee = new Employee(name,surname,age,employeePosition,subject);
-        }
-        public void WriterStudent(Student _student)
-        {
-            this.student = _student;
-            student = new Student(name, surname, age, faculty, specialty, group);
-        }
-        public void WriterVisitor(Visitor _visitor)
-        {
-            this.visitor = _visitor;
-            visitor = new Visitor(name, surname, age, goalVisit);
+            Writed.Invoke(sender, e);
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)

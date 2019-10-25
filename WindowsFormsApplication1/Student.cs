@@ -11,6 +11,10 @@ namespace WindowsFormsApplication1
         private string faculty;
         private string specialty;
         private string group;
+        public Student()
+        {
+
+        }
         public Student(string name, string surname, int age, string faculty, string specialty, string group)
             :base(name,surname,age)
         {

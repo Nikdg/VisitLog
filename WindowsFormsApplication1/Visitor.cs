@@ -9,6 +9,10 @@ namespace WindowsFormsApplication1
     public class Visitor : Person
     {
         private string goalVisit;
+        public Visitor()
+        {
+
+        }
         public Visitor(string name, string surname, int age, string goalVisit)
             : base(name, surname, age)
         {

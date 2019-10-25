@@ -8,8 +8,6 @@ namespace WindowsFormsApplication1
 {
     public interface IView
     {
-        void WriterEmployee(Employee _employee);
-        void WriterStudent(Student _student);
-        void WriterVisitor(Visitor _visitor);
+        event EventHandler Writed;
     }
 }

@@ -10,18 +10,47 @@ namespace WindowsFormsApplication1
     {
         MainForm form;
         Record record;
-        public Presenter()
-        {
-
-        }
-        public Presenter(MainForm form, Record record)
+        Employee employee;
+        Student student;
+        Visitor visitor;
+        public Presenter(MainForm form)
         {
             this.form = form;
-            this.record = record;
+            record = new Record();
+            employee = new Employee();
+            student = new Student();
+            visitor = new Visitor();
+            form.Writed += IndexIdentif;
         }
-        public void Run()
+        void IndexIdentif(object sender, EventArgs e)
         {
-            form.Show();
+            switch (form.comboBox1.SelectedIndex)
+            {
+                case 0:
+                    employee.Name = form.textBox1.Text;
+                    employee.Surname = form.textBox2.Text;
+                    employee.Age = Int32.Parse(form.textBox3.Text);
+                    employee.EmployeePosition = form.textBox4.Text;
+                    employee.Subject = form.textBox5.Text;
+                    form.listBox1.Items.Add(WriteEmployee(employee));
+                    break;
+                case 1:
+                    student.Name = form.textBox1.Text;
+                    student.Surname = form.textBox2.Text;
+                    student.Age = Int32.Parse(form.textBox3.Text);
+                    student.Faculty = form.textBox4.Text;
+                    student.Specialty = form.textBox5.Text;
+                    student.Group = form.textBox6.Text;
+                    form.listBox1.Items.Add(WriteStudent(student));
+                    break;
+                case 2:
+                    visitor.Name = form.textBox1.Text;
+                    visitor.Surname = form.textBox2.Text;
+                    visitor.Age = Int32.Parse(form.textBox3.Text);
+                    visitor.GoalVisit = form.textBox4.Text;
+                    form.listBox1.Items.Add(WriteVisitor(visitor));
+                    break;
+            }
         }
         public string WriteEmployee(Employee rec)
         {
@@ -34,6 +63,10 @@ namespace WindowsFormsApplication1
         public string WriteVisitor(Visitor rec)
         {
             return record.RecordVisit(rec.Name, rec.Surname, rec.Age, rec.GoalVisit);
+        }
+        public void Run()
+        {
+            form.Show();
         }
     }
 }

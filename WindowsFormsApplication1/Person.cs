@@ -11,6 +11,10 @@ namespace WindowsFormsApplication1
         private string name;
         private string surname;
         private int age;
+        public Person()
+        {
+
+        }
         public Person(string name,string surname,int age)
         {
             this.name = name;

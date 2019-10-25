@@ -18,3 +18,12 @@ D:\Git\VisitLog\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.cspr
 D:\Git\VisitLog\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.CoreCompileInputs.cache
 D:\Git\VisitLog\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 D:\Git\VisitLog\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Stud\PortableGit\VisitLog\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Stud\PortableGit\VisitLog\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Stud\PortableGit\VisitLog\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Stud\PortableGit\VisitLog\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Stud\PortableGit\VisitLog\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Stud\PortableGit\VisitLog\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Stud\PortableGit\VisitLog\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.MainForm.resources
+C:\Stud\PortableGit\VisitLog\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Stud\PortableGit\VisitLog\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
