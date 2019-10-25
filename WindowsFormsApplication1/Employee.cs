@@ -10,10 +10,10 @@ namespace WindowsFormsApplication1
     {
         private string employeePosition;
         private string subject;
-        public Employee()
-        {
+        //public Employee()
+        //{
        
-        }
+        //}
         public Employee(string name, string surname, int age, string employeePosition, string subject)
             :base(name,surname,age)
         {

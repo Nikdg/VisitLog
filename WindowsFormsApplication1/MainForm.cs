@@ -12,20 +12,21 @@ namespace WindowsFormsApplication1
 {
     public partial class MainForm : Form, IView
     {
-        public new void Show()
-        {
-            Application.Run(this);
-        }
+
+        //public new void Show()
+        //{
+        //    Application.Run(this);
+        //}
         public MainForm()
         {
             InitializeComponent();
             new Presenter(this);
             List<People> people = new List<People>
-        {
-            new People { Id=1, Name="Педагог"},
-            new People { Id=2, Name="Студент"},
-            new People { Id=3, Name="Гость"},
-        };
+            {
+                new People { Id=1, Name="Педагог"},
+                new People { Id=2, Name="Студент"},
+                new People { Id=3, Name="Гость"},
+            };
             comboBox1.DataSource = people;
             comboBox1.DisplayMember = "Name";
             comboBox1.ValueMember = "Id";
