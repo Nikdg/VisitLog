@@ -10,17 +10,13 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
+    public delegate string Writing(object sender, int e);
     public partial class MainForm : Form, IView
     {
-
-        //public new void Show()
-        //{
-        //    Application.Run(this);
-        //}
         public MainForm()
         {
             InitializeComponent();
-            new Presenter(this);
+            Presenter presenter = new Presenter(this);
             List<People> people = new List<People>
             {
                 new People { Id=1, Name="Педагог"},
@@ -32,7 +28,7 @@ namespace WindowsFormsApplication1
             comboBox1.ValueMember = "Id";
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
         }
-        public event EventHandler Writed;
+        public event Writing Writed;
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -81,7 +77,21 @@ namespace WindowsFormsApplication1
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            Writed.Invoke(sender, e);
+            switch (comboBox1.SelectedIndex)
+            {
+                case 0:
+                    Employee employee = new Employee(textBox1.Text, textBox2.Text, Int32.Parse(textBox3.Text), textBox4.Text, textBox5.Text);
+                    listBox1.Items.Add(Writed.Invoke(employee, comboBox1.SelectedIndex));
+                    break;
+                case 1:
+                    Student student = new Student(textBox1.Text, textBox2.Text, Int32.Parse(textBox3.Text), textBox4.Text, textBox5.Text, textBox6.Text);
+                    listBox1.Items.Add(Writed.Invoke(student, comboBox1.SelectedIndex));
+                    break;
+                case 2:
+                    Visitor visitor = new Visitor(textBox1.Text, textBox2.Text, Int32.Parse(textBox3.Text), textBox4.Text);
+                    listBox1.Items.Add(Writed.Invoke(visitor, comboBox1.SelectedIndex));
+                    break;
+            }
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)

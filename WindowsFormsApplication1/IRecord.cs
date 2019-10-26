@@ -15,6 +15,8 @@ namespace WindowsFormsApplication1
     }
     public interface IPresenter
     {
-        void Run();
+        string Write(Employee rec);
+        string Write(Student rec);
+        string Write(Visitor rec);
     }
 }

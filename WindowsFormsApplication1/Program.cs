@@ -16,8 +16,6 @@ namespace WindowsFormsApplication1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //var presenter = new Presenter(new MainForm(), new Record()); // Dependency Injection
-           // presenter.Run();
             Application.Run(new MainForm());
         }
     }

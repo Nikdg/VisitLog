@@ -8,6 +8,6 @@ namespace WindowsFormsApplication1
 {
     public interface IView
     {
-        event EventHandler Writed;
+        event Writing Writed;
     }
 }
